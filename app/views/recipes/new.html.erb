@@ -17,6 +17,10 @@
           <%= f.label :description, class: "form-label" %>
           <%= f.text_field :description, class: "form-control" %>
       </div>
+      <div class="mb-3">
+          <%= f.label :public, class: "form-label" %>
+          <%= f.check_box :public, { class: "class-name", style: "style"}, "true", "false"%>
+      </div>
       <%= f.submit class: "btn btn-primary" %>
   <% end %>
 </div>
