@@ -1,10 +1,10 @@
-<%= form_with model: @recipe_food, url: recipe_recipe_foods_path, local: true do |f| %>
-    <div class="d-flex">
-      <%= f.number_field :quantity, min: 0, class:"form-control w-50", placeholder: "Quantity", autofocus: true %>
-      <%= f.select(:food_id, @food_list.map {|food| [food.name, food.id]}) %>
-      <%= f.hidden_field :recipe_id, value: @recipe.id %>
-      <%# <%= f.select(:food_id, @food_list.each do {|food| [food.name, food.id]}) %>
-      <%# <%= f.hidden_field :recipe_id, value: @recipe.id %> %>
-      <%= f.submit 'Add ingredient', class:"btn btn-primary" %>
-    </div>
+
+<div class="recipe_form_container">
+  <%= form_for @recipe_food, url: recipe_recipe_foods_path(@recipe), method: :post, html: { class: 'recipe_form' } do |f| %>
+    <%= f.label :quantity, class: "form_field_label" %>
+    <%= f.text_field :quantity, class: 'form_field', required: true %>
+    <%= f.label :food, class: "form_field_label" %>
+    <%= f.collection_select :food_id, @recipe_foods, :id, :name, include_blank: true, class: 'form_field', required: true %>
+    <%= f.submit "Submit", class: "recipe_form_submit_btn" %>
   <% end %>
+</div>
