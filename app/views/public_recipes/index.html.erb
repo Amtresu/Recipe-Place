@@ -1,9 +1,5 @@
-<div class="my-5 container">
-<h1>All Recipes</h1>
+<div class="container">
+<% @public_recipes.each do |recipe|%>
+  <%= render  "/public_recipes/recipe", recipe: recipe %>
+<%end%>
 </div>
-
-    <% @recipes.each do |recipe| %>
-     <%= link_to recipe_path(recipe.id) do%>
-      <%= render partial: "recipe", locals: { recipe: } %>
-    <% end %>
-    <% end %>
