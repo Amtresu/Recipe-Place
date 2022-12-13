@@ -13,3 +13,39 @@
  *= require_tree .
  *= require_self
  */
+.holder {
+  text-align: center;
+  width: 90%;
+  margin: auto;
+}
+
+.button {
+  background-color: yellowgreen;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  font-weight: bold;
+}
+.sign-out {
+  text-decoration: none;
+  color: white;
+  border: 2px solid yellowgreen;
+  border-radius: 4px;
+  padding: 6px 8px 6px 8px;
+}
+
+.sign-out:hover {
+  color: yellowgreen;
+  cursor: pointer;
+}
+
+.input-field {
+  width: 90%;
+  margin-bottom: 60px;
+}
+
+.recipe-name {
+  text-decoration: none;
+  color: yellowgreen;
+}
+

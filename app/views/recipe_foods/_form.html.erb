@@ -10,6 +10,6 @@
             <%= f.label :food_id, style: "display: block" %>
             <%= f.collection_select(:food_id, Food.all, :id, :name, class:"w-full px-4 py-3 border") %>
         </div>
-        <%= f.submit class: "btn btn-primary" %>
+        <%= f.submit class: "btn btn-success" %>
     <% end %>
 </div>
